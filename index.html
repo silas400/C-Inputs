@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/codemirror.min.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main>
+
+        <div id="progressBarContainer">
+            <div id="progressBar"></div>
+          </div>
+
+          <div class="container">
+            <div id="1" class="lessonChunk">
+
+                <div class="lesson">
+                  <p>Using scanf to Capture Input in C!</p>
+              
+                  <div class="codeExample">
+                    <code><p>char name[50];</p></code>
+                    <code><p>printf("Enter your name: ");</p></code>
+                    <code><p>scanf(" %49s", name);</p></code>
+                  </div>
+              
+                  <p>The <span class="keyword">scanf</span> function is used to capture user input. Here, we are capturing a string input into the <span class="keyword">name</span> variable. Note the space before <span class="keyword">%49s</span>, which helps avoid capturing newline characters from previous input.</p>
+                </div>
+              
+                <div class="answerContainer">
+                  <button onclick="backButtonClicked()" class="back">Back</button>
+                  <button onclick="nextButtonClicked()" class="next">Next</button>
+                </div>
+              
+              </div>
+              
+              <div id="2" class="lessonChunk">
+              
+                <div class="lesson">
+                  <p>Good Practice with scanf!</p>
+              
+                  <div class="codeExample">
+                    <code><p>char address[100];</p></code>
+                    <code><p>printf("Enter your address: ");</p></code>
+                    <code><p>scanf(" %99[^\n]", address);</p></code>
+                  </div>
+              
+                  <p>Using the space before the format specifier and <span class="keyword">[^\n]</span> helps to read a line of text, including spaces, up to the newline character.</p>
+                </div>
+              
+                <div class="answerContainer">
+                  <button onclick="backButtonClicked()" class="back">Back</button>
+                  <button onclick="nextButtonClicked()" class="next">Next</button>
+                </div>
+              
+              </div>
+              
+              <div id="3" class="lessonChunk">
+              
+                <div class="lesson">
+                  <h2 class="red">CHALLENGE!</h2>
+              
+                  <p>Write a program that captures the user's favorite color using <span class="keyword">scanf</span> and then prints it out.</p>
+                </div>
+              
+                <div class="answerContainer">
+                  <button onclick="backButtonClicked()" class="back">Back</button>
+                  <button onclick="nextButtonClicked()" class="next">Next</button>
+                </div>
+              
+              </div>
+              
+              <div id="4" class="lessonChunk">
+              
+                <div class="lesson">
+                  <p>Using the rand Function to Generate Random Numbers!</p>
+              
+                  <div class="codeExample">
+                    <code><p>#include &lt;stdlib.h&gt;</p></code>
+                    <code><p>#include &lt;time.h&gt;</p></code>
+                    <code><p>int randomNumber;</p></code>
+                    <code><p>srand(time(0));</p></code>
+                    <code><p>randomNumber = rand() % 3 + 1;</p></code>
+                  </div>
+              
+                  <p>The <span class="keyword">rand</span> function is used to generate random numbers. Here, we generate a random number between 1 and 3. The <span class="keyword">srand(time(0))</span> is used to seed the random number generator to ensure different results each run.</p>
+                </div>
+              
+                <div class="answerContainer">
+                  <button onclick="backButtonClicked()" class="back">Back</button>
+                  <button onclick="nextButtonClicked()" class="next">Next</button>
+                </div>
+              
+              </div>
+              
+              <div id="5" class="lessonChunk">
+              
+                <div class="lesson">
+                  <p>Generating Random Numbers between 0 and 2!</p>
+              
+                  <div class="codeExample">
+                    <code><p>int randomNumber;</p></code>
+                    <code><p>srand(time(0));</p></code>
+                    <code><p>randomNumber = rand() % 3;</p></code>
+                  </div>
+              
+                  <p>Here, we generate a random number between 0 and 2 by using <span class="keyword">rand() % 3</span>. The modulus operator ensures the result is within the desired range.</p>
+                </div>
+              
+                <div class="answerContainer">
+                  <button onclick="backButtonClicked()" class="back">Back</button>
+                  <button onclick="nextButtonClicked()" class="next">Next</button>
+                </div>
+              
+              </div>
+              
+              <div id="6" class="lessonChunk step-by-step">
+              
+                <div class="lesson">
+                  <p>Generating Random Numbers (Step by Step)</p>
+              
+                  <div class="step" style="display: none;">
+                    <code><p>#include &lt;stdlib.h&gt;</p></code>
+                    <code><p>#include &lt;time.h&gt;</p></code>
+                    <p>Step 1: Include the necessary headers for the random number functions.</p>
+                  </div>
+              
+                  <div class="step" style="display: none;">
+                    <code><p>int randomNumber;</p></code>
+                    <p>Step 2: Declare an integer variable to store the random number.</p>
+                  </div>
+              
+                  <div class="step" style="display: none;">
+                    <code><p>srand(time(0));</p></code>
+                    <p>Step 3: Seed the random number generator with the current time to ensure different results each run.</p>
+                  </div>
+              
+                  <div class="step" style="display: none;">
+                    <code><p>randomNumber = rand() % 3 + 1;</p></code>
+                    <p>Step 4: Generate a random number between 1 and 3 using the <span class="keyword">rand</span> function and the modulus operator.</p>
+                  </div>
+              
+                  <button class="nextStep">Next Step</button>
+              
+                </div>
+              
+                <div class="answerContainer">
+                  <button onclick="backButtonClicked()" class="back">Back</button>
+                  <button onclick="nextButtonClicked()" class="next">Next</button>
+                </div>
+              
+              </div>
+              
+              <div id="7" class="lessonChunk">
+              
+                <div class="lesson">
+                  <h2 style="color: red;">Challenge!</h2>
+                  <p>Using the <span class="keyword">rand</span> function, write a program that generates a random number between 0 and 2 and prints it out. Make sure to include the necessary headers and seed the random number generator.</p>
+                </div>
+              
+                <div class="answerContainer">
+                  <button onclick="backButtonClicked()" class="back">Back</button>
+                  <button onclick="nextButtonClicked()" class="next">Next</button>
+                </div>
+              
+              </div>
+              
+        
+        </div>
+        
+    
+    
+</main>
+</body>
+</html>
